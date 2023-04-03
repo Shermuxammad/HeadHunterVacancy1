@@ -1,0 +1,17 @@
+<form method="post">
+    {% csrf_token %}
+    <div class="form-group">
+        <label for="{{ form.title.id_for_label }}">Title:</label>
+        {{ form.title }}
+    </div>
+    <div class="form-group">
+        <label for="{{ form.url.id_for_label }}">URL:</label>
+        {{ form.url }}
+    </div>
+    <div class="form-group">
+        <label for="{{ form.parent.id_for_label }}">Parent:</label>
+        {{ form.parent }}
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a href="{% url 'menu_list' %}" class="btn btn-secondary">Cancel</a>
+</form>
